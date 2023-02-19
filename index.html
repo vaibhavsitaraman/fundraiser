@@ -6,14 +6,16 @@
 <center>
 <h2>Donate for our Cause</h2>
   <br>
-  <h4>Goal: 30,000</h4>
+  <h4 id = "goal">Goal: 30,000</h4>
   <br>
-  <button style = "border-radius: 15px; width: 10%; height:5%; background-color: #4056A1" onclick = "pageReload()">Donate:</button>
-  <input style = "height: 5%">
+  <button style = "border-radius: 15px; width: 10%; height:5%; background-color: #4056A1" onclick = "subtractAmount()">Donate:</button>
+  <input style = "height: 5%" id = "input">
 </center>
   <script>
-    function pageReload(){
-      location.reload()
+    var input = document.getElementById("input")
+    var goal = document.getElementById("goal")
+    function subtractAmount(){
+      goal.innerText = goal.innerText - input.innerText
     }
   </script>
   </body>
